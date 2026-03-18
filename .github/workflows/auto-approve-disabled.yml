@@ -1,0 +1,23 @@
+name: Manual Review Required
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  review-policy:
+    name: Review Policy Notice
+    runs-on: ubuntu-latest
+    steps:
+      - name: Harden runner
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
+      - name: Fail when PR is opened by github-actions bot
+        if: github.actor == 'github-actions[bot]'
+        run: |
+          echo "Automated direct merges are not permitted without human review."
+          exit 1
