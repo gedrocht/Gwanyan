@@ -22,7 +22,7 @@ jobs:
           egress-policy: audit
 
       - name: Check out repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Lint GitHub Actions workflows
         uses: rhysd/actionlint@v1.7.8
@@ -39,7 +39,7 @@ jobs:
           egress-policy: audit
 
       - name: Check out repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Lint Markdown
         uses: DavidAnson/markdownlint-cli2-action@v20
@@ -60,7 +60,7 @@ jobs:
           egress-policy: audit
 
       - name: Check out repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Verify repository standards
         shell: pwsh
@@ -79,7 +79,7 @@ jobs:
           egress-policy: audit
 
       - name: Check out repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
