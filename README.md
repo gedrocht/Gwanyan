@@ -5,6 +5,22 @@ that renders a large square of dirt and grass, then drives the grass
 with a damped spring physics simulation whose wind source comes
 directly from the user's mouse position and movement.
 
+## Start Here
+
+If you are new to the project, read
+[START_HERE.md](START_HERE.md) first.
+
+The most beginner-friendly commands live in
+[scripts/README.md](scripts/README.md).
+
+The shortest beginner path is:
+
+```powershell
+pwsh ./scripts/check-prerequisites.ps1
+pwsh ./scripts/install-project-dependencies.ps1
+pwsh ./scripts/run-development-application.ps1
+```
+
 ## What The Project Includes
 
 - A 3D browser experience built with strict TypeScript and Three.js
@@ -20,28 +36,25 @@ directly from the user's mouse position and movement.
 
 ## Quick Start
 
-```bash
-npm install
-npm run dev
+```powershell
+pwsh ./scripts/check-prerequisites.ps1
+pwsh ./scripts/install-project-dependencies.ps1
+pwsh ./scripts/run-development-application.ps1
 ```
 
-Open the local URL, move the mouse across the field, and watch the wind push the grass.
+Open the local URL, move the mouse across the field, and watch the
+wind push the grass.
 
-## Quality Commands
+## Build, Test, And Verify
 
-```bash
-npm run quality
+```powershell
+pwsh ./scripts/build-all-artifacts.ps1
+pwsh ./scripts/run-all-tests.ps1
+pwsh ./scripts/verify-complete-project.ps1
 ```
 
-This runs:
-
-- formatting checks
-- ESLint
-- TypeScript typechecking
-- unit tests with coverage
-- application build
-- documentation generation
-- wiki validation
+These scripts provide the simplest named entry points for the full
+workflow.
 
 ## Documentation Layers
 
@@ -49,30 +62,21 @@ This runs:
 - `documentation/site/static/api/`: generated API docs from TypeDoc
 - `documentation/wiki/`: the separate beginner wiki served by Gollum
 
-## Example Commands
-
-```bash
-npm run docs:build
-npm run wiki:serve
-npm run test:unit
-npm run test:end-to-end
-```
-
 ## Build From The Scripts Directory
 
-If you prefer a discoverable script entry point instead of calling the npm
-script directly, use one of these wrappers from the repository root:
+If you want script names that are easy to understand, start in the
+`scripts` directory and use the matching PowerShell or Bash wrapper for
+the task you want.
 
 ```powershell
 pwsh ./scripts/build.ps1
+pwsh ./scripts/build-all-artifacts.ps1
+pwsh ./scripts/run-all-tests.ps1
+pwsh ./scripts/verify-complete-project.ps1
 ```
 
-```bash
-./scripts/build.sh
-```
-
-Both wrappers delegate to the same authoritative `npm run build` command that
-the continuous integration workflow uses.
+Detailed explanations live in
+[scripts/README.md](scripts/README.md).
 
 ## External Libraries
 

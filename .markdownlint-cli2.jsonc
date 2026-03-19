@@ -1,0 +1,15 @@
+{
+  "config": {
+    "default": true,
+    "line-length": false,
+    "no-inline-html": false,
+  },
+  "globs": ["**/*.md", "**/*.mdx"],
+  "ignores": [
+    ".tools/**",
+    "documentation/site/build/**",
+    "documentation/site/.docusaurus/**",
+    "documentation/site/static/api/**",
+    "node_modules/**",
+  ],
+}

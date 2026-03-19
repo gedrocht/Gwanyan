@@ -29,6 +29,7 @@ playwright-report/
 test-results/
 documentation/site/.docusaurus/
 documentation/site/build/
+documentation/site/generated-builds/
 documentation/site/static/api/
 
 # Env / secrets

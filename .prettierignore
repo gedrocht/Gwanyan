@@ -1,0 +1,8 @@
+coverage
+dist
+documentation/site/build
+documentation/site/.docusaurus
+documentation/site/generated-builds
+documentation/site/static/api
+node_modules
+.tools
