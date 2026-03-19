@@ -1,9 +1,9 @@
-# Gwanyan Interactive Grassland
+# Gwanyan
 
-Gwanyan Interactive Grassland is a WebGPU-first browser application
-that renders a large square of dirt and grass, then drives the grass
-with a damped spring physics simulation whose wind source comes
-directly from the user's mouse position and movement.
+[![Repo Health](https://github.com/gedrocht/Gwanyan/actions/workflows/repo-health.yml/badge.svg)](https://github.com/gedrocht/Gwanyan/actions/workflows/repo-health.yml)
+[![Dependency Review](https://github.com/gedrocht/Gwanyan/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/gedrocht/Gwanyan/actions/workflows/dependency-review.yml)
+[![CodeQL](https://github.com/gedrocht/Gwanyan/actions/workflows/codeql.yml/badge.svg)](https://github.com/gedrocht/Gwanyan/actions/workflows/codeql.yml)
+[![Scorecards](https://github.com/gedrocht/Gwanyan/actions/workflows/scorecards.yml/badge.svg)](https://github.com/gedrocht/Gwanyan/actions/workflows/scorecards.yml)
 
 ## Start Here
 
@@ -23,16 +23,7 @@ pwsh ./scripts/run-development-application.ps1
 
 ## What The Project Includes
 
-- A 3D browser experience built with strict TypeScript and Three.js
-- A large procedural dirt surface with grass blades that respond to wind
-- Mouse-driven localized wind based on both pointer position and pointer velocity
-- Verbose comments and generated API documentation for beginners
-- A polished handbook site built with Docusaurus for GitHub Pages
-- A separate serveable beginner wiki powered by actual wiki software
-- Structured client-side logging with an in-page diagnostics overlay and downloadable logs
-- Strict GitHub Actions for linting, typechecking, testing, coverage,
-  security, dependency review, documentation validation, and repository
-  policy enforcement
+## What This Repository Does
 
 ## Quick Start
 
@@ -99,6 +90,41 @@ The repository contains workflows and policies for:
 - GitHub Pages deployment
 - pull request quality checks
 
-Additional GitHub settings that must be enabled after the repository is
-pushed are documented in
-[documentation/site/docs/governance/github-setup.md](documentation/site/docs/governance/github-setup.md).
+1. Clone the repository.
+1. Review [CONTRIBUTING.md](CONTRIBUTING.md) before making changes.
+1. Run the repository policy check:
+
+   ```powershell
+   pwsh ./scripts/verify_repo_standards.ps1
+   ```
+
+## Included GitHub Safeguards
+
+- [Repo Health](https://github.com/gedrocht/Gwanyan/actions/workflows/repo-health.yml)
+  validates workflows, lints Markdown, checks repository policy, and
+  scans for secrets.
+- [Dependency Review](https://github.com/gedrocht/Gwanyan/actions/workflows/dependency-review.yml)
+  flags risky dependency changes in pull requests.
+- [CodeQL](https://github.com/gedrocht/Gwanyan/actions/workflows/codeql.yml)
+  analyzes committed GitHub Actions and JavaScript or TypeScript code
+  when those languages are present.
+- [Scorecards](https://github.com/gedrocht/Gwanyan/actions/workflows/scorecards.yml)
+  monitors open source supply chain health.
+
+## Project Files
+
+- [README.md](README.md): repository overview and quick start.
+- [CONTRIBUTING.md](CONTRIBUTING.md): contribution standards and review
+  expectations.
+- [SECURITY.md](SECURITY.md): private vulnerability reporting guidance.
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md): collaboration expectations.
+- [scripts/verify_repo_standards.ps1](scripts/verify_repo_standards.ps1):
+  repository policy validation script used by GitHub Actions.
+
+## Polishing Notes
+
+- Pull request titles are expected to use conventional prefixes such as
+  `feat:` and `fix:`.
+- Documentation is treated as a first-class quality gate.
+- The repository is tuned for strong defaults first, then for expansion
+  into application code as the project grows.
