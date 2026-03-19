@@ -5,21 +5,90 @@
 [![CodeQL](https://github.com/gedrocht/Gwanyan/actions/workflows/codeql.yml/badge.svg)](https://github.com/gedrocht/Gwanyan/actions/workflows/codeql.yml)
 [![Scorecards](https://github.com/gedrocht/Gwanyan/actions/workflows/scorecards.yml/badge.svg)](https://github.com/gedrocht/Gwanyan/actions/workflows/scorecards.yml)
 
-Gwanyan is a WebGPU-first interactive grassland project with a
-security-focused GitHub baseline, strict repository standards, and
-beginner-friendly project governance.
+## Start Here
+
+If you are new to the project, read
+[START_HERE.md](START_HERE.md) first.
+
+The most beginner-friendly commands live in
+[scripts/README.md](scripts/README.md).
+
+The shortest beginner path is:
+
+```powershell
+pwsh ./scripts/check-prerequisites.ps1
+pwsh ./scripts/install-project-dependencies.ps1
+pwsh ./scripts/run-development-application.ps1
+```
+
+## What The Project Includes
 
 ## What This Repository Does
 
-- Establishes a hardened GitHub repository foundation.
-- Enforces workflow validation, documentation linting, and repository
-  policy checks.
-- Adds dependency review, secret scanning, CodeQL analysis, and OpenSSF
-  Scorecards.
-- Documents how to contribute, report security issues, and collaborate
-  safely.
-
 ## Quick Start
+
+```powershell
+pwsh ./scripts/check-prerequisites.ps1
+pwsh ./scripts/install-project-dependencies.ps1
+pwsh ./scripts/run-development-application.ps1
+```
+
+Open the local URL, move the mouse across the field, and watch the
+wind push the grass.
+
+## Build, Test, And Verify
+
+```powershell
+pwsh ./scripts/build-all-artifacts.ps1
+pwsh ./scripts/run-all-tests.ps1
+pwsh ./scripts/verify-complete-project.ps1
+```
+
+These scripts provide the simplest named entry points for the full
+workflow.
+
+## Documentation Layers
+
+- `documentation/site/`: the structured handbook and GitHub Pages site
+- `documentation/site/static/api/`: generated API docs from TypeDoc
+- `documentation/wiki/`: the separate beginner wiki served by Gollum
+
+## Build From The Scripts Directory
+
+If you want script names that are easy to understand, start in the
+`scripts` directory and use the matching PowerShell or Bash wrapper for
+the task you want.
+
+```powershell
+pwsh ./scripts/build.ps1
+pwsh ./scripts/build-all-artifacts.ps1
+pwsh ./scripts/run-all-tests.ps1
+pwsh ./scripts/verify-complete-project.ps1
+```
+
+Detailed explanations live in
+[scripts/README.md](scripts/README.md).
+
+## External Libraries
+
+The project explicitly documents why each major external library exists
+and links to the relevant official documentation in
+[documentation/site/docs/reference/external-libraries.md](documentation/site/docs/reference/external-libraries.md).
+
+## GitHub Hardening
+
+The repository contains workflows and policies for:
+
+- linting and formatting
+- unit and browser testing
+- coverage enforcement
+- TypeDoc and Docusaurus build verification
+- secret scanning
+- dependency review
+- CodeQL analysis
+- OpenSSF Scorecards
+- GitHub Pages deployment
+- pull request quality checks
 
 1. Clone the repository.
 1. Review [CONTRIBUTING.md](CONTRIBUTING.md) before making changes.

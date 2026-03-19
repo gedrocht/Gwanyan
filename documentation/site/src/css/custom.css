@@ -1,0 +1,29 @@
+:root {
+  --ifm-color-primary: #567f42;
+  --ifm-color-primary-dark: #4b6f39;
+  --ifm-color-primary-darker: #456736;
+  --ifm-color-primary-darkest: #39562b;
+  --ifm-color-primary-light: #628f4a;
+  --ifm-color-primary-lighter: #68994e;
+  --ifm-color-primary-lightest: #76ad59;
+  --ifm-background-color: #f7f3e9;
+  --ifm-navbar-background-color: rgb(247 243 233 / 0.95);
+  --ifm-font-family-base: 'Aptos', 'Segoe UI Variable', 'Trebuchet MS', sans-serif;
+  --ifm-heading-font-family: 'Aptos Display', 'Aptos', 'Trebuchet MS', sans-serif;
+  --ifm-code-font-size: 95%;
+}
+
+html[data-theme='dark'] {
+  --ifm-background-color: #172127;
+  --ifm-navbar-background-color: rgb(23 33 39 / 0.95);
+}
+
+.heroBanner {
+  padding: 5rem 0;
+  background: radial-gradient(
+    circle at top,
+    rgb(236 244 235),
+    rgb(224 214 188) 50%,
+    rgb(181 164 126)
+  );
+}

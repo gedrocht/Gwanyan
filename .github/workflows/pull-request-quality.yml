@@ -1,0 +1,51 @@
+name: Pull Request Quality
+
+on:
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+      - reopened
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  validate-pull-request:
+    name: Validate Pull Request Metadata
+    runs-on: ubuntu-latest
+    steps:
+      - name: Harden runner
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
+      - name: Validate pull request title and body
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pullRequest = context.payload.pull_request;
+            const titlePattern = /^(feat|fix|docs|refactor|test|build|chore):\s.+/;
+            if (!titlePattern.test(pullRequest.title)) {
+              core.setFailed(
+                'Pull request titles must start with feat:, fix:, docs:, refactor:, test:, build:, or chore:.'
+              );
+            }
+
+            const bodyText = pullRequest.body ?? '';
+            const requiredChecklistItems = [
+              'Tests added or updated',
+              'Local verification completed',
+              'Security impact considered',
+              'Documentation updated if needed'
+            ];
+
+            for (const requiredChecklistItem of requiredChecklistItems) {
+              if (!bodyText.includes(requiredChecklistItem)) {
+                core.setFailed(
+                  `Pull request body is missing the checklist item: ${requiredChecklistItem}`
+                );
+              }
+            }
