@@ -31,6 +31,8 @@ $requiredFiles = @(
   "tests/end-to-end/application.spec.ts",
   "documentation/site/docusaurus.config.mjs",
   "documentation/wiki/docker-compose.yml",
+  "scripts/build.ps1",
+  "scripts/build.sh",
   "scripts/validate_wiki_links.py"
 )
 

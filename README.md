@@ -58,6 +58,22 @@ npm run test:unit
 npm run test:end-to-end
 ```
 
+## Build From The Scripts Directory
+
+If you prefer a discoverable script entry point instead of calling the npm
+script directly, use one of these wrappers from the repository root:
+
+```powershell
+pwsh ./scripts/build.ps1
+```
+
+```bash
+./scripts/build.sh
+```
+
+Both wrappers delegate to the same authoritative `npm run build` command that
+the continuous integration workflow uses.
+
 ## External Libraries
 
 The project explicitly documents why each major external library exists
