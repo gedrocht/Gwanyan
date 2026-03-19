@@ -24,6 +24,12 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 coverage/
+dist/
+playwright-report/
+test-results/
+documentation/site/.docusaurus/
+documentation/site/build/
+documentation/site/static/api/
 
 # Env / secrets
 .env
@@ -35,3 +41,6 @@ coverage/
 
 # Logs
 *.log
+
+# Local tooling
+.tools/

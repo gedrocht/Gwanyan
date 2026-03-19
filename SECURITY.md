@@ -2,7 +2,8 @@
 
 ## Reporting a vulnerability
 
-Please report suspected vulnerabilities privately through GitHub Security Advisories or your organization's private security channel.
+Please report suspected vulnerabilities privately through GitHub
+Security Advisories or your organization's private security channel.
 
 Do not open public issues for security-sensitive reports.
 

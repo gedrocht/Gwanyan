@@ -8,4 +8,5 @@ Participants should:
 - Keep discussions professional and focused on the work.
 - Avoid harassment, discrimination, or abusive behavior.
 
-Project maintainers may moderate or remove behavior that undermines a safe and productive environment.
+Project maintainers may moderate or remove behavior that undermines
+a safe and productive environment.
