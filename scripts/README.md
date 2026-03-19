@@ -15,31 +15,31 @@ Run these from the repository root in this order:
 pwsh ./scripts/check-prerequisites.ps1
 ```
 
-2. Install dependencies:
+1. Install dependencies:
 
 ```powershell
 pwsh ./scripts/install-project-dependencies.ps1
 ```
 
-3. Run the local app:
+1. Run the local app:
 
 ```powershell
 pwsh ./scripts/run-development-application.ps1
 ```
 
-4. Build all major artifacts:
+1. Build all major artifacts:
 
 ```powershell
 pwsh ./scripts/build-all-artifacts.ps1
 ```
 
-5. Run all tests:
+1. Run all tests:
 
 ```powershell
 pwsh ./scripts/run-all-tests.ps1
 ```
 
-6. Verify the whole project:
+1. Verify the whole project:
 
 ```powershell
 pwsh ./scripts/verify-complete-project.ps1

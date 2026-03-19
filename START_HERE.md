@@ -38,25 +38,25 @@ Run these from the repository root.
 pwsh ./scripts/install-project-dependencies.ps1
 ```
 
-2. Run the app locally:
+1. Run the app locally:
 
 ```powershell
 pwsh ./scripts/run-development-application.ps1
 ```
 
-3. Build the app, the handbook, and the API docs:
+1. Build the app, the handbook, and the API docs:
 
 ```powershell
 pwsh ./scripts/build-all-artifacts.ps1
 ```
 
-4. Run all automated tests:
+1. Run all automated tests:
 
 ```powershell
 pwsh ./scripts/run-all-tests.ps1
 ```
 
-5. Run the complete verification workflow:
+1. Run the complete verification workflow:
 
 ```powershell
 pwsh ./scripts/verify-complete-project.ps1
