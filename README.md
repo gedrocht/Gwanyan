@@ -1,100 +1,61 @@
-# Gwanyan Interactive Grassland
+# Gwanyan
 
-Gwanyan Interactive Grassland is a WebGPU-first browser application
-that renders a large square of dirt and grass, then drives the grass
-with a damped spring physics simulation whose wind source comes
-directly from the user's mouse position and movement.
+[![Repo Health](https://github.com/gedrocht/Gwanyan/actions/workflows/repo-health.yml/badge.svg)](https://github.com/gedrocht/Gwanyan/actions/workflows/repo-health.yml)
+[![Dependency Review](https://github.com/gedrocht/Gwanyan/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/gedrocht/Gwanyan/actions/workflows/dependency-review.yml)
+[![CodeQL](https://github.com/gedrocht/Gwanyan/actions/workflows/codeql.yml/badge.svg)](https://github.com/gedrocht/Gwanyan/actions/workflows/codeql.yml)
+[![Scorecards](https://github.com/gedrocht/Gwanyan/actions/workflows/scorecards.yml/badge.svg)](https://github.com/gedrocht/Gwanyan/actions/workflows/scorecards.yml)
 
-## What The Project Includes
+Gwanyan is a WebGPU-first interactive grassland project with a
+security-focused GitHub baseline, strict repository standards, and
+beginner-friendly project governance.
 
-- A 3D browser experience built with strict TypeScript and Three.js
-- A large procedural dirt surface with grass blades that respond to wind
-- Mouse-driven localized wind based on both pointer position and pointer velocity
-- Verbose comments and generated API documentation for beginners
-- A polished handbook site built with Docusaurus for GitHub Pages
-- A separate serveable beginner wiki powered by actual wiki software
-- Structured client-side logging with an in-page diagnostics overlay and downloadable logs
-- Strict GitHub Actions for linting, typechecking, testing, coverage,
-  security, dependency review, documentation validation, and repository
-  policy enforcement
+## What This Repository Does
+
+- Establishes a hardened GitHub repository foundation.
+- Enforces workflow validation, documentation linting, and repository
+  policy checks.
+- Adds dependency review, secret scanning, CodeQL analysis, and OpenSSF
+  Scorecards.
+- Documents how to contribute, report security issues, and collaborate
+  safely.
 
 ## Quick Start
 
-```bash
-npm install
-npm run dev
-```
+1. Clone the repository.
+1. Review [CONTRIBUTING.md](CONTRIBUTING.md) before making changes.
+1. Run the repository policy check:
 
-Open the local URL, move the mouse across the field, and watch the wind push the grass.
+   ```powershell
+   pwsh ./scripts/verify_repo_standards.ps1
+   ```
 
-## Quality Commands
+## Included GitHub Safeguards
 
-```bash
-npm run quality
-```
+- [Repo Health](https://github.com/gedrocht/Gwanyan/actions/workflows/repo-health.yml)
+  validates workflows, lints Markdown, checks repository policy, and
+  scans for secrets.
+- [Dependency Review](https://github.com/gedrocht/Gwanyan/actions/workflows/dependency-review.yml)
+  flags risky dependency changes in pull requests.
+- [CodeQL](https://github.com/gedrocht/Gwanyan/actions/workflows/codeql.yml)
+  analyzes committed GitHub Actions and JavaScript or TypeScript code
+  when those languages are present.
+- [Scorecards](https://github.com/gedrocht/Gwanyan/actions/workflows/scorecards.yml)
+  monitors open source supply chain health.
 
-This runs:
+## Project Files
 
-- formatting checks
-- ESLint
-- TypeScript typechecking
-- unit tests with coverage
-- application build
-- documentation generation
-- wiki validation
+- [README.md](README.md): repository overview and quick start.
+- [CONTRIBUTING.md](CONTRIBUTING.md): contribution standards and review
+  expectations.
+- [SECURITY.md](SECURITY.md): private vulnerability reporting guidance.
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md): collaboration expectations.
+- [scripts/verify_repo_standards.ps1](scripts/verify_repo_standards.ps1):
+  repository policy validation script used by GitHub Actions.
 
-## Documentation Layers
+## Polishing Notes
 
-- `documentation/site/`: the structured handbook and GitHub Pages site
-- `documentation/site/static/api/`: generated API docs from TypeDoc
-- `documentation/wiki/`: the separate beginner wiki served by Gollum
-
-## Example Commands
-
-```bash
-npm run docs:build
-npm run wiki:serve
-npm run test:unit
-npm run test:end-to-end
-```
-
-## Build From The Scripts Directory
-
-If you prefer a discoverable script entry point instead of calling the npm
-script directly, use one of these wrappers from the repository root:
-
-```powershell
-pwsh ./scripts/build.ps1
-```
-
-```bash
-./scripts/build.sh
-```
-
-Both wrappers delegate to the same authoritative `npm run build` command that
-the continuous integration workflow uses.
-
-## External Libraries
-
-The project explicitly documents why each major external library exists
-and links to the relevant official documentation in
-[documentation/site/docs/reference/external-libraries.md](documentation/site/docs/reference/external-libraries.md).
-
-## GitHub Hardening
-
-The repository contains workflows and policies for:
-
-- linting and formatting
-- unit and browser testing
-- coverage enforcement
-- TypeDoc and Docusaurus build verification
-- secret scanning
-- dependency review
-- CodeQL analysis
-- OpenSSF Scorecards
-- GitHub Pages deployment
-- pull request quality checks
-
-Additional GitHub settings that must be enabled after the repository is
-pushed are documented in
-[documentation/site/docs/governance/github-setup.md](documentation/site/docs/governance/github-setup.md).
+- Pull request titles are expected to use conventional prefixes such as
+  `feat:` and `fix:`.
+- Documentation is treated as a first-class quality gate.
+- The repository is tuned for strong defaults first, then for expansion
+  into application code as the project grows.
