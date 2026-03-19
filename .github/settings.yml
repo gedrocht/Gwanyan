@@ -1,0 +1,27 @@
+repository:
+  name: Gwanyan
+  description: WebGPU-first interactive grassland simulation with mouse-driven wind physics, strict quality gates, and beginner-focused documentation.
+  homepage: https://example.com
+  has_issues: true
+  has_projects: false
+  has_wiki: false
+  default_branch: main
+  delete_branch_on_merge: true
+  allow_squash_merge: true
+  allow_merge_commit: false
+  allow_rebase_merge: false
+  allow_auto_merge: false
+  archived: false
+labels:
+  - name: bug
+    color: d73a4a
+    description: Something is not working
+  - name: enhancement
+    color: a2eeef
+    description: New capability or improvement
+  - name: documentation
+    color: 0075ca
+    description: Documentation-related work
+  - name: dependencies
+    color: 5319e7
+    description: Dependency updates and maintenance

@@ -1,0 +1,9 @@
+services:
+  beginner-wiki:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '4567:4567'
+    volumes:
+      - ./content:/wiki/content:ro

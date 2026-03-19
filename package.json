@@ -1,0 +1,61 @@
+{
+  "name": "gwanyan-interactive-grassland",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A WebGPU-first interactive grassland study that renders photorealistic dirt and physically simulated grass responding to mouse-driven wind.",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 4173",
+    "build": "npm run typecheck && vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "lint": "eslint . --max-warnings=0",
+    "format": "prettier \"README.md\" \"START_HERE.md\" \"CODE_OF_CONDUCT.md\" \"CONTRIBUTING.md\" \"SECURITY.md\" \"index.html\" \".github/**/*.{md,yml,yaml}\" \"documentation/site/docs/**/*.md\" \"documentation/site/src/**/*.css\" \"documentation/site/src/**/*.mdx\" \"documentation/site/**/*.mjs\" \"documentation/wiki/content/**/*.md\" \"scripts/**/*.md\" \"scripts/**/*.mjs\" \"src/**/*.css\" \"src/**/*.ts\" \"tests/**/*.ts\" \"*.{json,jsonc,ts,mjs}\" --write",
+    "format:check": "prettier \"README.md\" \"START_HERE.md\" \"CODE_OF_CONDUCT.md\" \"CONTRIBUTING.md\" \"SECURITY.md\" \"index.html\" \".github/**/*.{md,yml,yaml}\" \"documentation/site/docs/**/*.md\" \"documentation/site/src/**/*.css\" \"documentation/site/src/**/*.mdx\" \"documentation/site/**/*.mjs\" \"documentation/wiki/content/**/*.md\" \"scripts/**/*.md\" \"scripts/**/*.mjs\" \"src/**/*.css\" \"src/**/*.ts\" \"tests/**/*.ts\" \"*.{json,jsonc,ts,mjs}\" --check",
+    "typecheck": "tsc --noEmit",
+    "audit:production": "npm audit --omit=dev --audit-level=high",
+    "audit:all": "npm audit --audit-level=high",
+    "test": "npm run test:unit && npm run test:end-to-end",
+    "test:unit": "node scripts/runUnitTestsWithFreshCoverage.mjs",
+    "test:unit:watch": "vitest",
+    "pretest:end-to-end": "node scripts/ensurePlaywrightArtifactDirectories.mjs",
+    "test:end-to-end": "playwright test",
+    "docs:api": "typedoc",
+    "docs:site": "node scripts/buildDocumentationSite.mjs",
+    "docs:serve": "docusaurus start documentation/site --host 0.0.0.0 --port 3001",
+    "docs:build": "npm run docs:api && npm run docs:site",
+    "wiki:serve": "docker compose -f documentation/wiki/docker-compose.yml up --build",
+    "wiki:down": "docker compose -f documentation/wiki/docker-compose.yml down",
+    "wiki:validate": "python scripts/validate_wiki_links.py",
+    "quality": "npm run format:check && npm run lint && npm run typecheck && npm run audit:production && npm run test:unit && npm run build && npm run docs:build && npm run wiki:validate"
+  },
+  "dependencies": {
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "three": "0.183.2"
+  },
+  "devDependencies": {
+    "@docusaurus/core": "3.9.2",
+    "@docusaurus/preset-classic": "3.9.2",
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.58.2",
+    "@types/node": "25.5.0",
+    "@types/three": "0.183.1",
+    "@vitest/coverage-v8": "4.1.0",
+    "eslint": "10.0.3",
+    "eslint-plugin-jsdoc": "62.8.0",
+    "eslint-plugin-security": "4.0.0",
+    "eslint-plugin-sonarjs": "4.0.2",
+    "eslint-plugin-unicorn": "63.0.0",
+    "globals": "17.4.0",
+    "jsdom": "29.0.0",
+    "markdownlint-cli2": "0.21.0",
+    "prettier": "3.8.1",
+    "typedoc": "0.28.17",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.57.1",
+    "vite": "8.0.0",
+    "vitest": "4.1.0"
+  }
+}
