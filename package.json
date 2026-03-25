@@ -49,7 +49,7 @@
     "eslint-plugin-sonarjs": "4.0.2",
     "eslint-plugin-unicorn": "63.0.0",
     "globals": "17.4.0",
-    "jsdom": "29.0.0",
+    "jsdom": "29.0.1",
     "markdownlint-cli2": "0.21.0",
     "prettier": "3.8.1",
     "typedoc": "0.28.17",
