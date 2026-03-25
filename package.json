@@ -43,7 +43,7 @@
     "@types/node": "25.5.0",
     "@types/three": "0.183.1",
     "@vitest/coverage-v8": "4.1.0",
-    "eslint": "10.0.3",
+    "eslint": "10.1.0",
     "eslint-plugin-jsdoc": "62.8.0",
     "eslint-plugin-security": "4.0.0",
     "eslint-plugin-sonarjs": "4.0.2",
