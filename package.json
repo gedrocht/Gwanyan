@@ -39,7 +39,7 @@
     "@docusaurus/core": "3.9.2",
     "@docusaurus/preset-classic": "3.9.2",
     "@eslint/js": "10.0.1",
-    "@playwright/test": "1.58.2",
+    "@playwright/test": "1.59.0",
     "@types/node": "25.5.0",
     "@types/three": "0.183.1",
     "@vitest/coverage-v8": "4.1.0",
