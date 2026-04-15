@@ -51,7 +51,7 @@ jobs:
         run: echo "path=$(cat documentation/site/generated-builds/latest-path.txt)" >> "$GITHUB_OUTPUT"
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ${{ steps.generated-site.outputs.path }}
 
